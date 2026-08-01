@@ -1,3 +1,6 @@
+/* ═══════════════════════
+   THEMES
+═══════════════════════ */
 const T = {
 	breathe: {
 		bg: "#0e0904",
@@ -155,8 +158,148 @@ const T = {
 		thumbBg: "rgba(105,195,215,.45)",
 		flashCol: "rgba(105,195,215,.05)"
 	},
+	classical: {
+		bg: "#f4ece0",
+		accent: [152, 22, 42],
+		accentHex: "#98162a",
+		vigA: "rgba(185,162,135,.3)",
+		vigB: "rgba(155,128,98,.52)",
+		textMain: "#221416",
+		textDim: "rgba(55,22,28,.38)",
+		cueCol: "rgba(132,16,36,.78)",
+		heroIdle: ["listen to", "silence"],
+		heroIdleAccent: -1,
+		heroAct: ["feel the", "music"],
+		heroActAccent: -1,
+		tagIdle: "Classical · Harmony · Timeless",
+		tagAct: "breathe with the phrase",
+		cueStart: "let the music guide you",
+		pattern: "Natural Breath",
+		detail: "follow the phrase",
+		phases: [
+			{ n: "inhale", d: 4 },
+			{ n: "exhale", d: 6 }
+		],
+		barCol: "rgba(132,16,36,.45)",
+		barLbl: "rgba(55,22,28,.5)",
+		slPat: "rgba(55,22,28,.55)",
+		slDet: "rgba(132,16,36,.7)",
+		dotCol: "#98162a",
+		ringCol: "rgba(152,22,42,.5)",
+		// nav — light parchment feel
+		navBg: "rgba(244,235,218,.92)",
+		navBorder: "rgba(152,22,42,.28)",
+		pillActive: "#ffe6e8",
+		pillDim: "rgba(130,60,40,.82)",
+		pillActiveBg: "#98162a",
+		pillDimBg: "transparent",
+		thumbBg: "rgba(152,22,42,.45)",
+		flashCol: "rgba(152,22,42,.05)"
+	},
+	jazz: {
+		bg: "#0d0804",
+		accent: [238, 162, 24],
+		accentHex: "#eea218",
+		vigA: "rgba(6,3,0,.44)",
+		vigB: "rgba(4,2,0,.84)",
+		textMain: "#ffedbc",
+		textDim: "rgba(255,210,115,.3)",
+		cueCol: "rgba(238,162,24,.82)",
+		heroIdle: ["feel the", "groove"],
+		heroIdleAccent: -1,
+		heroAct: ["swing and", "sway"],
+		heroActAccent: -1,
+		tagIdle: "Jazz · Improvisation · Soul",
+		tagAct: "ride the rhythm",
+		cueStart: "let loose",
+		pattern: "Free Breathing",
+		detail: "follow the beat",
+		phases: [
+			{ n: "inhale", d: 3 },
+			{ n: "exhale", d: 4 }
+		],
+		barCol: "rgba(238,162,24,.55)",
+		barLbl: "rgba(255,210,115,.45)",
+		slPat: "rgba(255,210,115,.55)",
+		slDet: "rgba(238,162,24,.7)",
+		dotCol: "#eea218",
+		ringCol: "rgba(238,162,24,.65)",
+		// nav — warm dark amber
+		navBg: "rgba(22,10,0,.88)",
+		navBorder: "rgba(238,162,24,.30)",
+		pillActive: "#fff7e6",
+		pillDim: "rgba(255,210,140,.82)",
+		pillActiveBg: "#eea218",
+		pillDimBg: "transparent",
+		thumbBg: "rgba(238,162,24,.45)",
+		flashCol: "rgba(238,162,24,.07)"
+	}
 };
 
+const AFFIRMATIONS = [
+	"In the cosmic scale of existence, this moment of fear is already dissolving.",
+	"You have survived every hard day until now. Your record is perfect.",
+	"Nothing troubling you right now will matter in a hundred years.",
+	"The universe has held you this long. It is not about to let go.",
+	"This feeling is weather — it will pass, as all weather does.",
+	"You are not your anxiety. You are the sky; anxiety is just a cloud.",
+	"Right now, in this breath, you are okay. That is enough.",
+	"Everything is always working out for you, even when it feels otherwise.",
+	"You are loved by forces far larger than your fears.",
+	"Your nervous system is doing its job. You can thank it and let go.",
+	"In ten years you will barely remember this moment. Be gentle.",
+	"The earth is beneath you. The sky is above. You belong here.",
+	"You don't have to solve everything tonight. Tonight, just breathe.",
+	"Chaos has always given way to calm. This is the law of life.",
+	"Nothing is permanent — not pain, not panic, not this moment."
+];
+
+const BASE_C = "https://archive.org/download/classical_music_202209/";
+const CLASSICAL_TRACKS = [
+	{
+		url: BASE_C + "Beethoven%20-%20Moonlight%20Sonata.mp3",
+		name: "Beethoven — Moonlight Sonata"
+	},
+	{
+		url: BASE_C + "Chopin%20-%20Nocturne%20No%202.mp3",
+		name: "Chopin — Nocturne No. 2"
+	},
+	{
+		url: BASE_C + "Beethoven%20-%20Fur%20Elise.mp3",
+		name: "Beethoven — Für Elise"
+	},
+	{
+		url: BASE_C + "Chopin%20-%20Minute%20Waltz.mp3",
+		name: "Chopin — Minute Waltz"
+	}
+];
+const JAZZ_TRACKS = [
+	{
+		url:
+			"https://archive.org/download/78_west-end-blues_louis-armstrong-and-his-hot-five-louis-armstrong_gbia0001057a/West%20End%20Blues%20-%20Louis%20Armstrong.mp3",
+		name: "Louis Armstrong — West End Blues"
+	},
+	{
+		url:
+			"https://archive.org/download/78_saint-louis-blues_bessie-smith-louis-armstrong-w-c-handy_gbia0001052b/Saint%20Louis%20Blues%20-%20Bessie%20Smith.mp3",
+		name: "Bessie Smith — Saint Louis Blues"
+	},
+	{
+		url:
+			"https://archive.org/download/78_stardust_hoagy-carmichael_gbia0001352a/Stardust%20-%20Hoagy%20Carmichael.mp3",
+		name: "Hoagy Carmichael — Stardust"
+	},
+	{
+		url:
+			"https://archive.org/download/78_tiger-rag_original-dixieland-jass-band_gbia0000141b/Tiger%20Rag%20-%20Original%20Dixieland%20Jass%20Band.mp3",
+		name: "Original Dixieland Jazz Band — Tiger Rag"
+	},
+	{
+		url:
+			"https://archive.org/download/78_indiana_original-dixieland-jazz-band_gbia0000143a/Indiana%20-%20Original%20Dixieland%20Jazz%20Band.mp3",
+		name: "Original Dixieland Jazz Band — Indiana"
+	}
+];
 let musicAudio = null;
 
 /* ═══ CANVAS ══ */
@@ -186,6 +329,123 @@ let textAnim = 0,
 	charData = [],
 	cueChars = [];
 let natureCycleT = 0;
+
+/* ═══ MOUSE + DRAG STATE ══ */
+let mx = 0.5,
+	my = 0.5,
+	rmx = 0.5,
+	rmy = 0.5;
+// Velocity for drag effect
+let pmx = 0.5,
+	pmy = 0.5,
+	mvx = 0,
+	mvy = 0;
+// Click/drag impulse
+let clickImpulse = 0,
+	isDragging = false,
+	dragEnergy = 0;
+// Click ripple positions for wave distortion
+let clickRipples = [];
+
+document.addEventListener("mousedown", (e) => {
+	isDragging = true;
+	clickImpulse = 1.0;
+	clickRipples.push({
+		x: e.clientX / W,
+		y: e.clientY / H,
+		t: 0,
+		strength: 1.0
+	});
+	if (clickRipples.length > 6) clickRipples.shift();
+});
+document.addEventListener("mouseup", () => {
+	isDragging = false;
+});
+document.addEventListener("mousemove", (e) => {
+	pmx = mx;
+	pmy = my;
+	mx = e.clientX / W;
+	my = e.clientY / H;
+	mvx = (mx - pmx) * 60;
+	mvy = (my - pmy) * 60;
+	if (isDragging) {
+		dragEnergy = Math.min(
+			dragEnergy + Math.sqrt(mvx * mvx + mvy * mvy) * 0.04,
+			1.5
+		);
+		if (Math.random() < 0.08) {
+			clickRipples.push({
+				x: mx,
+				y: my,
+				t: 0,
+				strength: 0.4 + dragEnergy * 0.3
+			});
+			if (clickRipples.length > 8) clickRipples.shift();
+		}
+	}
+	const dotEl = document.getElementById("dot");
+	dotEl.style.left = e.clientX + "px";
+	dotEl.style.top = e.clientY + "px";
+});
+document.addEventListener(
+	"touchstart",
+	(e) => {
+		isDragging = true;
+		const t2 = e.touches[0];
+		clickImpulse = 1.0;
+		clickRipples.push({
+			x: t2.clientX / W,
+			y: t2.clientY / H,
+			t: 0,
+			strength: 1.0
+		});
+		if (clickRipples.length > 6) clickRipples.shift();
+	},
+	{ passive: true }
+);
+document.addEventListener("touchend", () => {
+	isDragging = false;
+});
+document.addEventListener(
+	"touchmove",
+	(e) => {
+		const t2 = e.touches[0];
+		mx = t2.clientX / W;
+		my = t2.clientY / H;
+	},
+	{ passive: true }
+);
+
+/* lazy smoothing for cursor ring */
+const dotEl = document.getElementById("dot"),
+	ringEl = document.getElementById("ring");
+let csx = 0,
+	csy = 0,
+	crx = 0,
+	cry = 0;
+document.addEventListener("mousemove", (e) => {
+	csx = e.clientX;
+	csy = e.clientY;
+});
+(function ac() {
+	crx += (csx - crx) * 0.11;
+	cry += (csy - cry) * 0.11;
+	rmx += (mx - rmx) * 0.04;
+	rmy += (my - rmy) * 0.04;
+	// decay
+	clickImpulse *= 0.94;
+	dragEnergy *= 0.97;
+	// age ripples
+	for (let i = clickRipples.length - 1; i >= 0; i--) {
+		clickRipples[i].t += 0.016;
+		if (clickRipples[i].t > 2.5) clickRipples.splice(i, 1);
+	}
+	mvx *= 0.88;
+	mvy *= 0.88;
+	ringEl.style.left = crx + "px";
+	ringEl.style.top = cry + "px";
+	requestAnimationFrame(ac);
+})();
 
 /* ═══ RIPPLES ══ */
 function spawnRipple(x, y) {
@@ -1420,6 +1680,662 @@ function drawNature(t, bs, ev) {
 	drawMouseWave(t, [105, 195, 215], 0.06);
 }
 
+/* ══════════════════════════════════════
+   5. CLASSICAL — parchment + pink-red wave in sync with sheet music
+══════════════════════════════════════ */
+const NOTES_PER_STAVE = 16;
+const NOTE_DATA = Array.from({ length: 4 }, (_, si) =>
+	Array.from({ length: NOTES_PER_STAVE }, (_, ni) => {
+		const r = RNG(si * 100 + ni * 7);
+		return {
+			pos: Math.floor(r() * 9) - 4,
+			type: Math.floor(r() * 3),
+			rest: r() > 0.82
+		};
+	})
+);
+// Track scroll phase per stave — used to sync the wave to note playback position
+let classicalWavePhase = 0;
+function drawClassical(t, bs, ev) {
+	const bg2 = bgX.createLinearGradient(0, 0, 0, H);
+	bg2.addColorStop(0, "#f8f2e4");
+	bg2.addColorStop(0.4, "#f3ebd7");
+	bg2.addColorStop(0.8, "#eee2cc");
+	bg2.addColorStop(1, "#e9d9be");
+	bgX.fillStyle = bg2;
+	bgX.fillRect(0, 0, W, H);
+	const vg = bgX.createRadialGradient(
+		W / 2,
+		H / 2,
+		H * 0.14,
+		W / 2,
+		H / 2,
+		W * 0.74
+	);
+	vg.addColorStop(0, "transparent");
+	vg.addColorStop(0.62, `rgba(138,92,52,${0.04 + bs * 0.08})`);
+	vg.addColorStop(1, `rgba(95,50,20,${0.22 + bs * 0.1})`);
+	bgX.fillStyle = vg;
+	bgX.fillRect(0, 0, W, H);
+	// Mouse warm spot
+	const mspot = bgX.createRadialGradient(
+		W * rmx,
+		H * rmy,
+		0,
+		W * rmx,
+		H * rmy,
+		W * (0.25 + dragEnergy * 0.06)
+	);
+	mspot.addColorStop(
+		0,
+		`rgba(200,140,80,${0.03 + bs * 0.05 + dragEnergy * 0.03})`
+	);
+	mspot.addColorStop(1, "transparent");
+	bgX.fillStyle = mspot;
+	bgX.fillRect(0, 0, W, H);
+	// Click ripple warm burst on parchment
+	clickRipples.forEach((r) => {
+		const g2 = bgX.createRadialGradient(
+			r.x * W,
+			r.y * H,
+			0,
+			r.x * W,
+			r.y * H,
+			W * 0.15 * r.strength
+		);
+		g2.addColorStop(
+			0,
+			`rgba(180,60,50,${r.strength * 0.04 * Math.exp(-r.t * 1.5)})`
+		);
+		g2.addColorStop(1, "transparent");
+		bgX.fillStyle = g2;
+		bgX.fillRect(0, 0, W, H);
+	});
+
+	fxX.clearRect(0, 0, W, H);
+	tpX.clearRect(0, 0, W, H);
+	const staveY = [H * 0.2, H * 0.38, H * 0.56, H * 0.74];
+	// Track which stave is "active" (playing) — cycles through them
+	const stavePeriod = 8; // seconds per stave cycle
+	const activeStave = Math.floor(((t * 0.001) / stavePeriod) % 4);
+	// Note playback position within active stave (0..1)
+	const notePlayPos = (((t * 0.001) / stavePeriod) % 1) * NOTES_PER_STAVE;
+
+	for (let s = 0; s < 4; s++) {
+		const baseY = staveY[s],
+			scrollX = (t * 0.021 * (1 + s * 0.42)) % W;
+		for (let line = 0; line < 5; line++) {
+			const ly = baseY + line * 9;
+			const lg = bgX.createLinearGradient(0, 0, W, 0);
+			lg.addColorStop(0, "transparent");
+			lg.addColorStop(0.04, `rgba(68,32,12,${0.13 + bs * 0.06})`);
+			lg.addColorStop(0.96, `rgba(68,32,12,${0.13 + bs * 0.06})`);
+			lg.addColorStop(1, "transparent");
+			bgX.strokeStyle = lg;
+			bgX.lineWidth = 0.72;
+			bgX.beginPath();
+			bgX.moveTo(0, ly);
+			bgX.lineTo(W, ly);
+			bgX.stroke();
+		}
+		bgX.font = `${34 + s * 2}px serif`;
+		bgX.fillStyle = `rgba(78,32,15,${0.19 + bs * 0.09})`;
+		bgX.fillText("𝄞", Math.max(18, 40 - scrollX * 0.03), baseY + 26);
+		for (let b2 = 0; b2 < 6; b2++) {
+			const bx = (b2 * (W / 5.5) + W - scrollX) % W;
+			if (bx > 58 && bx < W - 10) {
+				bgX.beginPath();
+				bgX.moveTo(bx, baseY - 2);
+				bgX.lineTo(bx, baseY + 38);
+				bgX.strokeStyle = `rgba(58,22,10,${0.11 + bs * 0.05})`;
+				bgX.lineWidth = 1.2;
+				bgX.stroke();
+			}
+		}
+		NOTE_DATA[s].forEach((nd, ni) => {
+			const nx2 = (ni * (W / NOTES_PER_STAVE) + W - scrollX * 1.85) % W;
+			if (nx2 < 58 || nx2 > W - 10) return;
+			const ny2 = baseY + nd.pos * 4.5 + 18;
+			// active stave notes near playhead glow pink-red
+			const isNearPlayhead = s === activeStave && Math.abs(ni - notePlayPos) < 1.2;
+			const na = isNearPlayhead ? 0.22 + bs * 0.18 : 0.13 + bs * 0.13;
+			if (nd.rest) {
+				bgX.strokeStyle = `rgba(58,22,10,${na * 0.8})`;
+				bgX.lineWidth = 1.5;
+				bgX.beginPath();
+				bgX.moveTo(nx2 - 6, ny2 - 6);
+				bgX.lineTo(nx2 + 6, ny2 - 6);
+				bgX.stroke();
+				return;
+			}
+			const vib =
+				Math.sin(t * 0.003 + ni * 1.2) * bs * 2.5 +
+				(rmx - 0.5) * bs * 3 +
+				mvx * 0.4 * Math.sin(ni * 0.3);
+			// Note color — pink-red tint near playhead
+			const noteR = isNearPlayhead
+				? `rgba(165,18,40,${na + 0.08})`
+				: `rgba(52,20,8,${na})`;
+			bgX.beginPath();
+			bgX.ellipse(nx2 + vib, ny2, 5.5, 4.2, -0.2, 0, Math.PI * 2);
+			bgX.fillStyle = noteR;
+			bgX.fill();
+			const stemDir = nd.pos < 0 ? 1 : -1;
+			bgX.beginPath();
+			bgX.moveTo(nx2 + vib + 4.5, ny2);
+			bgX.lineTo(nx2 + vib + 4.5, ny2 - 28 * stemDir);
+			bgX.strokeStyle = noteR;
+			bgX.lineWidth = 1.2;
+			bgX.stroke();
+			if (nd.type === 2) {
+				bgX.beginPath();
+				bgX.moveTo(nx2 + vib + 4.5, ny2 - 28 * stemDir);
+				bgX.quadraticCurveTo(
+					nx2 + vib + 22,
+					ny2 - 20 * stemDir,
+					nx2 + vib + 18,
+					ny2 - 10 * stemDir
+				);
+				bgX.strokeStyle = `rgba(52,20,8,${na * 0.8})`;
+				bgX.lineWidth = 1;
+				bgX.stroke();
+			}
+			if (nd.pos > 4 || nd.pos < -4) {
+				bgX.beginPath();
+				bgX.moveTo(nx2 - 7, ny2);
+				bgX.lineTo(nx2 + 12, ny2);
+				bgX.strokeStyle = `rgba(52,20,8,${na * 0.7})`;
+				bgX.lineWidth = 0.8;
+				bgX.stroke();
+			}
+		});
+	}
+
+	// Ink waves — strongly mouse-reactive
+	const mxBC = rmx - 0.5,
+		myBC = rmy - 0.5;
+	[
+		[0.72, 22, 0.62, 0.000038, 0.15, 1.8],
+		[0.65, 17, 0.98, 0.00005, 0.12, 1.4],
+		[0.79, 15, 0.43, 0.000027, 0.11, 2.0],
+		[0.59, 11, 1.52, 0.000063, 0.09, 1.0]
+	].forEach(([yc, a, fm, sp, op, w], i) => {
+		const mouseYShift = myBC * H * 0.1 * (1 - i * 0.1);
+		const yB = H * yc + mouseYShift;
+		const mxAmpBoost =
+			1 + Math.abs(mxBC) * 2.2 + dragEnergy * 1.5 + Math.abs(myBC) * 0.9;
+		const amp = a * (0.48 + 0.52 * bs) * mxAmpBoost;
+		const fmMod = fm * (1 + mxBC * 0.5 + mvx * 0.045);
+		const ph = t * sp;
+		fxX.beginPath();
+		for (let x = 0; x <= W; x += 4) {
+			const nx = x / W;
+			let y =
+				yB +
+				Math.sin(nx * Math.PI * 2 * fmMod + ph * 5 + mxBC * nx * 4.5) * amp +
+				mxBC * amp * 0.55 * Math.sin(nx * Math.PI * 2.5 + i) +
+				Math.sin(nx * Math.PI * 3 * fmMod * 0.7 + ph * 3.5 + i) * amp * 0.42 +
+				mvx * amp * 0.09 * Math.sin(nx * Math.PI * 2.2) +
+				mvy * amp * 0.06 * Math.cos(nx * Math.PI * 1.8 + i);
+			for (const r of clickRipples) {
+				const dx = nx - r.x,
+					age = r.t,
+					wf = age * 0.5,
+					sp2 = 0.1 + age * 0.15;
+				y +=
+					r.strength *
+					amp *
+					0.24 *
+					Math.exp(-Math.pow(Math.abs(dx) - wf, 2) / (sp2 * sp2)) *
+					Math.exp(-age * 1.0) *
+					Math.sin((Math.abs(dx) - wf) * 18);
+			}
+			x === 0 ? fxX.moveTo(0, y) : fxX.lineTo(x, y);
+		}
+		const distToMouse = Math.abs(rmy - yc);
+		const proximityBoost = Math.exp(-distToMouse * 3.5) * 0.45;
+		fxX.strokeStyle = `rgba(68,26,15,${
+			(op + proximityBoost) * (0.38 + 0.62 * bs)
+		})`;
+		fxX.lineWidth = w * (1 + proximityBoost * 1.6);
+		fxX.stroke();
+	});
+
+	// ── Pink-Red wave — synced to sheet music + strongly mouse-reactive ──
+	const scrollSync = notePlayPos / NOTES_PER_STAVE;
+	classicalWavePhase += isActive ? 0.0018 : 0.0008;
+	const pinkWaveLayers = [
+		{
+			yFrac: 0.5,
+			ampFrac: 0.038,
+			freq: 1.6,
+			lineW: 3.0,
+			alpha: 0.52 + bs * 0.3
+		},
+		{
+			yFrac: 0.5,
+			ampFrac: 0.062,
+			freq: 1.6,
+			lineW: 9.0,
+			alpha: 0.13 + bs * 0.18
+		},
+		{
+			yFrac: 0.5,
+			ampFrac: 0.028,
+			freq: 3.2,
+			lineW: 1.5,
+			alpha: 0.36 + bs * 0.24
+		}
+	];
+	pinkWaveLayers.forEach(({ yFrac, ampFrac, freq, lineW, alpha }, li) => {
+		// Strong vertical mouse tracking — wave follows cursor Y
+		const wY = H * (yFrac + (rmy - 0.5) * 0.22);
+		const wAmp =
+			H *
+			ampFrac *
+			(0.5 + bs * 0.7) *
+			(1 +
+				Math.abs(rmx - 0.5) * 1.8 +
+				dragEnergy * 1.2 +
+				Math.abs(rmy - 0.5) * 0.6);
+		const freqMod = freq * (1 + (rmx - 0.5) * 0.5 + mvx * 0.04);
+		const ph =
+			classicalWavePhase * 5.5 + scrollSync * Math.PI * 4 + (rmx - 0.5) * 2.5;
+		tpX.beginPath();
+		for (let x = 0; x <= W; x += 3) {
+			const nx = x / W;
+			let y =
+				wY +
+				Math.sin(nx * Math.PI * 2 * freqMod + ph) * wAmp +
+				Math.sin(nx * Math.PI * 3.5 * freqMod + ph * 0.72) * wAmp * 0.4 +
+				Math.sin(nx * Math.PI * 1.1 + ph * 0.4) * wAmp * 0.24 +
+				(rmx - 0.5) * wAmp * 1.0 * Math.sin(nx * Math.PI * 2 + li) + // strong horizontal bend
+				mvx * wAmp * 0.1 * Math.sin(nx * Math.PI * 3.5) + // velocity drag
+				mvy * wAmp * 0.06 * Math.cos(nx * Math.PI * 2.2 + li); // vertical velocity
+			if (dragEnergy > 0.1)
+				y += dragEnergy * wAmp * 0.6 * Math.sin(nx * Math.PI * 5.5 + ph * 1.3);
+			for (const r of clickRipples) {
+				const dx = nx - r.x,
+					age = r.t,
+					wf = age * 0.5,
+					sp2 = 0.09 + age * 0.13;
+				y +=
+					r.strength *
+					wAmp *
+					0.45 *
+					Math.exp(-Math.pow(Math.abs(dx) - wf, 2) / (sp2 * sp2)) *
+					Math.exp(-age * 0.8) *
+					Math.sin((Math.abs(dx) - wf) * 22);
+			}
+			x === 0 ? tpX.moveTo(0, y) : tpX.lineTo(x, y);
+		}
+		const grad = tpX.createLinearGradient(0, wY - wAmp * 1.5, 0, wY + wAmp * 1.5);
+		grad.addColorStop(0, `rgba(230,100,130,${alpha * 0.4})`);
+		grad.addColorStop(0.4, `rgba(200,30,60,${alpha})`);
+		grad.addColorStop(0.6, `rgba(180,18,45,${alpha})`);
+		grad.addColorStop(1, `rgba(240,130,160,${alpha * 0.3})`);
+		tpX.strokeStyle = grad;
+		tpX.lineWidth = lineW * (1 + dragEnergy * 0.4);
+		tpX.stroke();
+	});
+
+	const rph = t * 0.000027;
+	for (let r2 = 0; r2 < 3; r2++) {
+		const yoff = H * (0.5 + r2 * 0.042);
+		fxX.beginPath();
+		for (let x = 0; x <= W; x += 3) {
+			const nx = x / W;
+			const y =
+				yoff +
+				Math.sin(nx * Math.PI * 2 * 0.6 + rph * (4.5 + r2)) *
+					(18 + bs * 13) *
+					(0.3 + r2 * 0.2) +
+				Math.sin(nx * Math.PI * 1.4 + rph * (3 + r2)) * 8 +
+				(rmx - 0.5) * 12 * Math.sin(nx * Math.PI * 1.2) +
+				mvx * 5 * Math.sin(nx * Math.PI * 2);
+			x === 0 ? fxX.moveTo(0, y) : fxX.lineTo(x, y);
+		}
+		fxX.strokeStyle = `rgba(152,22,42,${(0.11 + bs * 0.19) * (1 - r2 * 0.25)})`;
+		fxX.lineWidth = 1.8 - r2 * 0.3;
+		fxX.stroke();
+	}
+	drawMouseWave(t, [152, 22, 42], 0.05);
+}
+
+/* ══════════════════════════════════════
+   6. JAZZ
+══════════════════════════════════════ */
+const JP = {
+	bg: "#0d0804",
+	cream: "#f0e4c0",
+	red: "#c02818",
+	orange: "#de7808",
+	gold: "#eea818",
+	navy: "#0c0e1a",
+	teal: "#167585",
+	black: "#060402"
+};
+function jpRect(c, x, y, w, h, col, a) {
+	c.save();
+	c.globalAlpha = a;
+	c.fillStyle = col;
+	c.fillRect(x, y, w, h);
+	c.restore();
+}
+function jpCircle(c, cx, cy, r, col, a, fill) {
+	c.save();
+	c.globalAlpha = a;
+	if (fill) {
+		c.fillStyle = col;
+		c.beginPath();
+		c.arc(cx, cy, r, 0, Math.PI * 2);
+		c.fill();
+	} else {
+		c.strokeStyle = col;
+		c.lineWidth = r * 0.12;
+		c.beginPath();
+		c.arc(cx, cy, r, 0, Math.PI * 2);
+		c.stroke();
+	}
+	c.restore();
+}
+function drawVinyl(ctx, cx, cy, R2, t2, bs2) {
+	jpCircle(ctx, cx, cy, R2, JP.cream, 0.88, true);
+	ctx.save();
+	ctx.translate(cx, cy);
+	ctx.rotate(t2 * 0.00028 * (1 + bs2 * 0.5));
+	for (let i = 0; i < 7; i++) {
+		ctx.globalAlpha = 0.11 + i * 0.03;
+		ctx.strokeStyle = JP.black;
+		ctx.lineWidth = 1.1;
+		ctx.beginPath();
+		ctx.arc(0, 0, R2 * (0.38 + i * 0.082), 0, Math.PI * 2);
+		ctx.stroke();
+	}
+	ctx.globalAlpha = 1;
+	ctx.fillStyle = JP.black;
+	ctx.beginPath();
+	ctx.arc(0, 0, R2 * 0.35, 0, Math.PI * 2);
+	ctx.fill();
+	ctx.fillStyle = JP.orange;
+	ctx.globalAlpha = 0.17 + bs2 * 0.1;
+	ctx.beginPath();
+	ctx.arc(0, 0, R2 * 0.28, 0, Math.PI * 2);
+	ctx.fill();
+	ctx.globalAlpha = 1;
+	ctx.fillStyle = JP.cream;
+	ctx.beginPath();
+	ctx.arc(0, 0, R2 * 0.045, 0, Math.PI * 2);
+	ctx.fill();
+	ctx.restore();
+}
+function drawSax(ctx, cx, cy, scale, t2, bs2) {
+	const s = scale;
+	ctx.save();
+	ctx.translate(cx, cy);
+	ctx.save();
+	ctx.globalAlpha = 0.82;
+	ctx.strokeStyle = JP.gold;
+	ctx.lineWidth = s * 0.08;
+	ctx.lineCap = "round";
+	ctx.beginPath();
+	ctx.moveTo(0, -s * 0.5);
+	ctx.bezierCurveTo(s * 0.3, -s * 0.4, s * 0.4, -s * 0.1, s * 0.25, s * 0.1);
+	ctx.bezierCurveTo(s * 0.1, s * 0.3, -s * 0.1, s * 0.4, -s * 0.15, s * 0.55);
+	ctx.stroke();
+	for (let k = 0; k < 5; k++) {
+		const kp = k / 4,
+			kx = s * (0.08 * Math.sin(kp * Math.PI * 1.5) * 0.8),
+			ky = s * (-0.4 + kp * 0.85);
+		const kpulse = 1 + Math.sin(t2 * 0.004 + k * 0.7) * bs2 * 0.06;
+		ctx.globalAlpha = 0.5 + bs2 * 0.2;
+		ctx.strokeStyle = JP.cream;
+		ctx.lineWidth = s * 0.015;
+		ctx.beginPath();
+		ctx.arc(kx + s * 0.18, ky, s * 0.028 * kpulse, 0, Math.PI * 2);
+		ctx.stroke();
+	}
+	ctx.restore();
+	ctx.save();
+	ctx.globalAlpha = 0.7;
+	ctx.strokeStyle = JP.gold;
+	ctx.lineWidth = s * 0.055;
+	ctx.beginPath();
+	ctx.ellipse(
+		-s * 0.05,
+		s * 0.58,
+		s * 0.18,
+		s * 0.11,
+		Math.PI / 4,
+		0,
+		Math.PI * 2
+	);
+	ctx.stroke();
+	ctx.restore();
+	ctx.restore();
+}
+function drawJazz(t, bs, ev) {
+	bgX.fillStyle = JP.bg;
+	bgX.fillRect(0, 0, W, H);
+	// Color blocks shift slightly with mouse drag
+	const blockShift = dragEnergy * W * 0.015;
+	jpRect(
+		bgX,
+		W * 0.44 - blockShift,
+		0,
+		W * 0.56 + blockShift,
+		H * 0.6,
+		JP.red,
+		0.88
+	);
+	jpRect(bgX, 0, H * 0.55, W * 0.62, H * 0.45, JP.navy, 0.92);
+	jpRect(bgX, W * 0.62, H * 0.72, W * 0.38, H * 0.28, JP.teal, 0.44);
+	const sp = bgX.createRadialGradient(
+		W * rmx,
+		H * 0.04,
+		0,
+		W * rmx,
+		H * 0.07,
+		W * (0.58 + dragEnergy * 0.1)
+	);
+	sp.addColorStop(0, `rgba(238,162,24,${0.09 + bs * 0.16 + dragEnergy * 0.04})`);
+	sp.addColorStop(0.42, `rgba(175,88,12,${0.04 + bs * 0.07})`);
+	sp.addColorStop(1, "transparent");
+	bgX.fillStyle = sp;
+	bgX.fillRect(0, 0, W, H);
+	clickRipples.forEach((r) => {
+		const g2 = bgX.createRadialGradient(
+			r.x * W,
+			r.y * H,
+			0,
+			r.x * W,
+			r.y * H,
+			W * 0.18 * r.strength
+		);
+		g2.addColorStop(
+			0,
+			`rgba(238,162,24,${r.strength * 0.08 * Math.exp(-r.t * 1.3)})`
+		);
+		g2.addColorStop(1, "transparent");
+		bgX.fillStyle = g2;
+		bgX.fillRect(0, 0, W, H);
+	});
+	fxX.clearRect(0, 0, W, H);
+	tpX.clearRect(0, 0, W, H);
+	const vR = Math.min(W, H) * 0.26 * (1 + bs * 0.015 + clickImpulse * 0.02);
+	// Vinyl wobbles slightly with drag
+	const vOx = dragEnergy * W * 0.008,
+		vOy = dragEnergy * H * 0.005;
+	drawVinyl(bgX, W * 0.22 + vOx, H * 0.44 + vOy, vR, t, bs);
+	if (bs > 0.05) {
+		const gl = bgX.createRadialGradient(
+			W * 0.22 + vOx,
+			H * 0.44 + vOy,
+			vR * 0.9,
+			W * 0.22 + vOx,
+			H * 0.44 + vOy,
+			vR * 1.52
+		);
+		gl.addColorStop(0, JP.gold);
+		gl.addColorStop(1, "transparent");
+		bgX.globalAlpha = bs * 0.18;
+		bgX.fillStyle = gl;
+		bgX.beginPath();
+		bgX.arc(W * 0.22 + vOx, H * 0.44 + vOy, vR * 1.52, 0, Math.PI * 2);
+		bgX.fill();
+		bgX.globalAlpha = 1;
+	}
+	drawSax(
+		fxX,
+		W * 0.68 + (rmx - 0.5) * W * 0.02,
+		H * 0.28 + (rmy - 0.5) * H * 0.02,
+		Math.min(W, H) * 0.27,
+		t,
+		bs
+	);
+	const pkY = H * 0.78,
+		pkH = H * 0.2,
+		pkW = W * 0.72,
+		wkCount = 14,
+		kww = pkW / wkCount;
+	const blackPat = [0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1];
+	for (let i = 0; i < wkCount; i++) {
+		const kx = i * kww,
+			pulse =
+				0.92 + Math.sin(t * 0.003 + i * 0.4) * bs * 0.06 + clickImpulse * 0.04;
+		tpX.save();
+		tpX.globalAlpha = pulse;
+		tpX.fillStyle = i % 2 === 0 ? JP.cream : "#e3d7b0";
+		tpX.fillRect(kx + 1, pkY, kww - 2, pkH);
+		tpX.strokeStyle = "rgba(0,0,0,.2)";
+		tpX.lineWidth = 1;
+		tpX.strokeRect(kx + 1, pkY, kww - 2, pkH);
+		tpX.restore();
+	}
+	const bkw = kww * 0.6,
+		bkh = pkH * 0.6;
+	for (let i = 0; i < wkCount - 1; i++) {
+		if (!blackPat[i]) continue;
+		const kx = (i + 1) * kww - bkw / 2,
+			pulse =
+				0.84 + Math.sin(t * 0.003 + i * 0.4 + 1) * bs * 0.07 + clickImpulse * 0.03;
+		tpX.save();
+		tpX.globalAlpha = pulse;
+		tpX.fillStyle = JP.black;
+		tpX.fillRect(kx, pkY, bkw, bkh);
+		tpX.restore();
+	}
+	tpX.save();
+	tpX.globalAlpha = 0.13;
+	tpX.fillStyle = JP.cream;
+	tpX.beginPath();
+	tpX.arc(W, 0, W * 0.22, 0, Math.PI * 0.5);
+	tpX.closePath();
+	tpX.fill();
+	tpX.restore();
+	jpCircle(tpX, W * 0.5, H * 0.1, W * 0.09, JP.navy, 0.8, true);
+	tpX.save();
+	tpX.globalAlpha = 0.52 + bs * 0.14 + dragEnergy * 0.08;
+	tpX.strokeStyle = JP.gold;
+	tpX.lineWidth = W * 0.016;
+	tpX.beginPath();
+	tpX.arc(W * 0.74, H * 0.62, W * 0.11, -Math.PI * 0.5, Math.PI * 0.55);
+	tpX.stroke();
+	tpX.restore();
+	jpCircle(tpX, W * 0.86, H * 0.68, W * 0.05, JP.red, 0.62 + bs * 0.14, true);
+	for (let i = 0; i < 6; i++) {
+		const sx = W * (0.56 + i * 0.042);
+		// String wobble strongly reacts to mouse horizontal position and velocity
+		const wobble =
+			Math.sin(t * 0.002 * (1 + i * 0.1) + i * 0.8) *
+				(3 + bs * 17) *
+				(1 + (rmx - 0.5) * 1.8 + dragEnergy * 0.8) +
+			mvx * 0.5;
+		// Each string glows more when cursor is nearby horizontally
+		const distX = Math.abs(rmx - (0.56 + i * 0.042));
+		const strProximity = Math.exp(-distX * 8) * 0.6;
+		const grad = fxX.createLinearGradient(0, 0, 0, H);
+		grad.addColorStop(0, "rgba(238,172,24,0)");
+		grad.addColorStop(
+			0.1,
+			`rgba(238,172,24,${0.44 + bs * 0.32 + strProximity * 0.3})`
+		);
+		grad.addColorStop(
+			0.9,
+			`rgba(238,172,24,${0.38 + bs * 0.26 + strProximity * 0.25})`
+		);
+		grad.addColorStop(1, "rgba(238,172,24,0)");
+		fxX.beginPath();
+		for (let y2 = 0; y2 <= H; y2 += 3) {
+			const xo =
+				wobble * Math.sin((y2 / H) * Math.PI * 3 + t * 0.0015 + i) +
+				(rmx - 0.5) * 8 * Math.sin((y2 / H) * Math.PI * 2 + i) + // horizontal mouse bends strings
+				mvy * 3 * Math.cos((y2 / H) * Math.PI + i); // vertical velocity
+			let xr = 0;
+			for (const r of clickRipples) {
+				const dy = y2 / H - r.y,
+					age = r.t,
+					wf = age * 0.5,
+					sp2 = 0.08 + age * 0.12;
+				xr +=
+					r.strength *
+					wobble *
+					0.5 *
+					Math.exp(-Math.pow(Math.abs(dy) - wf, 2) / (sp2 * sp2)) *
+					Math.exp(-age * 1.1) *
+					Math.sin((Math.abs(dy) - wf) * 22);
+			}
+			y2 === 0 ? fxX.moveTo(sx + xo + xr, 0) : fxX.lineTo(sx + xo + xr, y2);
+		}
+		fxX.strokeStyle = grad;
+		fxX.lineWidth = (0.8 + (6 - i) * 0.18) * (1 + strProximity);
+		fxX.stroke();
+	}
+	[
+		[0.88, 18, 1.1, 0.000058, JP.gold, 0.18],
+		[0.93, 12, 1.6, 0.000072, JP.orange, 0.14]
+	].forEach(([yc, amp, fm, sp, col, op]) => {
+		const yB = H * yc,
+			a2 =
+				amp *
+				(0.5 + 0.5 * bs) *
+				(1 + ev * 0.3) *
+				(1 + Math.abs(rmx - 0.5) * 0.6 + dragEnergy * 0.4),
+			ph = t * sp;
+		tpX.save();
+		tpX.globalAlpha = op + bs * 0.07;
+		tpX.beginPath();
+		for (let x = 0; x <= W; x += 3) {
+			const nx = x / W;
+			let y =
+				yB +
+				Math.sin(nx * Math.PI * 2 * fm + ph * 8) * a2 +
+				(rmx - 0.5) * a2 * 0.5 * Math.sin(nx * Math.PI * 1.4) +
+				mvx * a2 * 0.02;
+			for (const r of clickRipples) {
+				const dx = nx - r.x,
+					age = r.t,
+					wf = age * 0.5,
+					sp2 = 0.08 + age * 0.12;
+				y +=
+					r.strength *
+					a2 *
+					0.25 *
+					Math.exp(-Math.pow(Math.abs(dx) - wf, 2) / (sp2 * sp2)) *
+					Math.exp(-age * 1.1) *
+					Math.sin((Math.abs(dx) - wf) * 20);
+			}
+			x === 0 ? tpX.moveTo(0, y) : tpX.lineTo(x, y);
+		}
+		tpX.lineTo(W, H);
+		tpX.lineTo(0, H);
+		tpX.closePath();
+		tpX.fillStyle = col;
+		tpX.fill();
+		tpX.restore();
+	});
+	drawMouseWave(t, [238, 162, 24], 0.1);
+}
 
 /* ═══ BARS ══ */
 const barBox = document.getElementById("bar-counter");
@@ -1969,6 +2885,31 @@ function startAudio() {
 		];
 		pool[Math.floor(Math.random() * pool.length)]();
 	}
+}
+
+/* ═══ AFFIRMATIONS ══ */
+const affEl = document.getElementById("affirmation"),
+	affTxt = document.getElementById("affirmation-text");
+let affTo = null,
+	affIdx = 0;
+function nextAff() {
+	affEl.style.opacity = "0";
+	setTimeout(() => {
+		affTxt.textContent = AFFIRMATIONS[affIdx % AFFIRMATIONS.length];
+		affIdx++;
+		affEl.style.opacity = "1";
+	}, 1400);
+	affTo = setTimeout(nextAff, 13000);
+}
+function startAff() {
+	affIdx = Math.floor(Math.random() * AFFIRMATIONS.length);
+	affTxt.style.color = T[mode].cueCol;
+	affEl.style.transition = "opacity 2.2s ease";
+	nextAff();
+}
+function stopAff() {
+	clearTimeout(affTo);
+	affEl.style.opacity = "0";
 }
 
 /* ═══ THEME ══ */
