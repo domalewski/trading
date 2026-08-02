@@ -2695,31 +2695,6 @@ function startAudio() {
 	}
 }
 
-/* ═══ AFFIRMATIONS ══ */
-const affEl = document.getElementById("affirmation"),
-	affTxt = document.getElementById("affirmation-text");
-let affTo = null,
-	affIdx = 0;
-function nextAff() {
-	affEl.style.opacity = "0";
-	setTimeout(() => {
-		affTxt.textContent = AFFIRMATIONS[affIdx % AFFIRMATIONS.length];
-		affIdx++;
-		affEl.style.opacity = "1";
-	}, 1400);
-	affTo = setTimeout(nextAff, 13000);
-}
-function startAff() {
-	affIdx = Math.floor(Math.random() * AFFIRMATIONS.length);
-	affTxt.style.color = T[mode].cueCol;
-	affEl.style.transition = "opacity 2.2s ease";
-	nextAff();
-}
-function stopAff() {
-	clearTimeout(affTo);
-	affEl.style.opacity = "0";
-}
-
 /* ═══ THEME ══ */
 function applyTheme(m) {
 	const th = T[m];
@@ -2727,8 +2702,6 @@ function applyTheme(m) {
 	document.getElementById(
 		"vig"
 	).style.background = `radial-gradient(ellipse at 50% 50%, transparent 14%, ${th.vigA} 56%, ${th.vigB} 100%)`;
-	dotEl.style.background = th.dotCol;
-	ringEl.style.border = `1px solid ${th.ringCol}`;
 	document.getElementById("bar-lbl").style.color = th.barLbl;
 	document.getElementById("sl-pattern").style.color = th.slPat;
 	document.getElementById("sl-detail").style.color = th.slDet;
@@ -2783,14 +2756,6 @@ document.querySelectorAll(".mode-pill").forEach((p) => {
 		natureCycleT = 0;
 		classicalWavePhase = 0;
 		LAKE_RIPPLES.length = 0;
-	});
-	p.addEventListener("mouseenter", () => {
-		ringEl.style.width = "50px";
-		ringEl.style.height = "50px";
-	});
-	p.addEventListener("mouseleave", () => {
-		ringEl.style.width = "26px";
-		ringEl.style.height = "26px";
 	});
 });
 
@@ -2849,14 +2814,6 @@ function stopSession() {
 const btn = document.getElementById("breath-btn");
 btn.addEventListener("click", () => {
 	isActive ? stopSession() : startSession();
-});
-btn.addEventListener("mouseenter", () => {
-	ringEl.style.width = "84px";
-	ringEl.style.height = "84px";
-});
-btn.addEventListener("mouseleave", () => {
-	ringEl.style.width = "26px";
-	ringEl.style.height = "26px";
 });
 
 /* ═══ RENDER ══ */
