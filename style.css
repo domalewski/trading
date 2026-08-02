@@ -11,7 +11,6 @@ body {
 	height: 100%;
 	overflow: hidden;
 	font-family: "Syne", sans-serif;
-	cursor: none;
 	transition: background 2.5s ease;
 }
 body {
@@ -142,7 +141,7 @@ canvas {
 	font-size: 0.65rem;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
-	cursor: none;
+	cursor: pointer;
 	outline: none;
 	transition: color 0.4s, background 0.4s, font-weight 0.3s;
 	white-space: nowrap;
@@ -272,7 +271,7 @@ body.active .tagline {
 	background: transparent;
 	border: none;
 	outline: none;
-	cursor: none;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
