@@ -158,148 +158,10 @@ const T = {
 		thumbBg: "rgba(105,195,215,.45)",
 		flashCol: "rgba(105,195,215,.05)"
 	},
-	classical: {
-		bg: "#f4ece0",
-		accent: [152, 22, 42],
-		accentHex: "#98162a",
-		vigA: "rgba(185,162,135,.3)",
-		vigB: "rgba(155,128,98,.52)",
-		textMain: "#221416",
-		textDim: "rgba(55,22,28,.38)",
-		cueCol: "rgba(132,16,36,.78)",
-		heroIdle: ["listen to", "silence"],
-		heroIdleAccent: -1,
-		heroAct: ["feel the", "music"],
-		heroActAccent: -1,
-		tagIdle: "Classical · Harmony · Timeless",
-		tagAct: "breathe with the phrase",
-		cueStart: "let the music guide you",
-		pattern: "Natural Breath",
-		detail: "follow the phrase",
-		phases: [
-			{ n: "inhale", d: 4 },
-			{ n: "exhale", d: 6 }
-		],
-		barCol: "rgba(132,16,36,.45)",
-		barLbl: "rgba(55,22,28,.5)",
-		slPat: "rgba(55,22,28,.55)",
-		slDet: "rgba(132,16,36,.7)",
-		dotCol: "#98162a",
-		ringCol: "rgba(152,22,42,.5)",
-		// nav — light parchment feel
-		navBg: "rgba(244,235,218,.92)",
-		navBorder: "rgba(152,22,42,.28)",
-		pillActive: "#ffe6e8",
-		pillDim: "rgba(130,60,40,.82)",
-		pillActiveBg: "#98162a",
-		pillDimBg: "transparent",
-		thumbBg: "rgba(152,22,42,.45)",
-		flashCol: "rgba(152,22,42,.05)"
-	},
-	jazz: {
-		bg: "#0d0804",
-		accent: [238, 162, 24],
-		accentHex: "#eea218",
-		vigA: "rgba(6,3,0,.44)",
-		vigB: "rgba(4,2,0,.84)",
-		textMain: "#ffedbc",
-		textDim: "rgba(255,210,115,.3)",
-		cueCol: "rgba(238,162,24,.82)",
-		heroIdle: ["feel the", "groove"],
-		heroIdleAccent: -1,
-		heroAct: ["swing and", "sway"],
-		heroActAccent: -1,
-		tagIdle: "Jazz · Improvisation · Soul",
-		tagAct: "ride the rhythm",
-		cueStart: "let loose",
-		pattern: "Free Breathing",
-		detail: "follow the beat",
-		phases: [
-			{ n: "inhale", d: 3 },
-			{ n: "exhale", d: 4 }
-		],
-		barCol: "rgba(238,162,24,.55)",
-		barLbl: "rgba(255,210,115,.45)",
-		slPat: "rgba(255,210,115,.55)",
-		slDet: "rgba(238,162,24,.7)",
-		dotCol: "#eea218",
-		ringCol: "rgba(238,162,24,.65)",
-		// nav — warm dark amber
-		navBg: "rgba(22,10,0,.88)",
-		navBorder: "rgba(238,162,24,.30)",
-		pillActive: "#fff7e6",
-		pillDim: "rgba(255,210,140,.82)",
-		pillActiveBg: "#eea218",
-		pillDimBg: "transparent",
-		thumbBg: "rgba(238,162,24,.45)",
-		flashCol: "rgba(238,162,24,.07)"
-	}
+
 };
 
-const AFFIRMATIONS = [
-	"In the cosmic scale of existence, this moment of fear is already dissolving.",
-	"You have survived every hard day until now. Your record is perfect.",
-	"Nothing troubling you right now will matter in a hundred years.",
-	"The universe has held you this long. It is not about to let go.",
-	"This feeling is weather — it will pass, as all weather does.",
-	"You are not your anxiety. You are the sky; anxiety is just a cloud.",
-	"Right now, in this breath, you are okay. That is enough.",
-	"Everything is always working out for you, even when it feels otherwise.",
-	"You are loved by forces far larger than your fears.",
-	"Your nervous system is doing its job. You can thank it and let go.",
-	"In ten years you will barely remember this moment. Be gentle.",
-	"The earth is beneath you. The sky is above. You belong here.",
-	"You don't have to solve everything tonight. Tonight, just breathe.",
-	"Chaos has always given way to calm. This is the law of life.",
-	"Nothing is permanent — not pain, not panic, not this moment."
-];
 
-const BASE_C = "https://archive.org/download/classical_music_202209/";
-const CLASSICAL_TRACKS = [
-	{
-		url: BASE_C + "Beethoven%20-%20Moonlight%20Sonata.mp3",
-		name: "Beethoven — Moonlight Sonata"
-	},
-	{
-		url: BASE_C + "Chopin%20-%20Nocturne%20No%202.mp3",
-		name: "Chopin — Nocturne No. 2"
-	},
-	{
-		url: BASE_C + "Beethoven%20-%20Fur%20Elise.mp3",
-		name: "Beethoven — Für Elise"
-	},
-	{
-		url: BASE_C + "Chopin%20-%20Minute%20Waltz.mp3",
-		name: "Chopin — Minute Waltz"
-	}
-];
-const JAZZ_TRACKS = [
-	{
-		url:
-			"https://archive.org/download/78_west-end-blues_louis-armstrong-and-his-hot-five-louis-armstrong_gbia0001057a/West%20End%20Blues%20-%20Louis%20Armstrong.mp3",
-		name: "Louis Armstrong — West End Blues"
-	},
-	{
-		url:
-			"https://archive.org/download/78_saint-louis-blues_bessie-smith-louis-armstrong-w-c-handy_gbia0001052b/Saint%20Louis%20Blues%20-%20Bessie%20Smith.mp3",
-		name: "Bessie Smith — Saint Louis Blues"
-	},
-	{
-		url:
-			"https://archive.org/download/78_stardust_hoagy-carmichael_gbia0001352a/Stardust%20-%20Hoagy%20Carmichael.mp3",
-		name: "Hoagy Carmichael — Stardust"
-	},
-	{
-		url:
-			"https://archive.org/download/78_tiger-rag_original-dixieland-jass-band_gbia0000141b/Tiger%20Rag%20-%20Original%20Dixieland%20Jass%20Band.mp3",
-		name: "Original Dixieland Jazz Band — Tiger Rag"
-	},
-	{
-		url:
-			"https://archive.org/download/78_indiana_original-dixieland-jazz-band_gbia0000143a/Indiana%20-%20Original%20Dixieland%20Jazz%20Band.mp3",
-		name: "Original Dixieland Jazz Band — Indiana"
-	}
-];
 let musicAudio = null;
 
 /* ═══ CANVAS ══ */
@@ -361,32 +223,7 @@ document.addEventListener("mousedown", (e) => {
 document.addEventListener("mouseup", () => {
 	isDragging = false;
 });
-document.addEventListener("mousemove", (e) => {
-	pmx = mx;
-	pmy = my;
-	mx = e.clientX / W;
-	my = e.clientY / H;
-	mvx = (mx - pmx) * 60;
-	mvy = (my - pmy) * 60;
-	if (isDragging) {
-		dragEnergy = Math.min(
-			dragEnergy + Math.sqrt(mvx * mvx + mvy * mvy) * 0.04,
-			1.5
-		);
-		if (Math.random() < 0.08) {
-			clickRipples.push({
-				x: mx,
-				y: my,
-				t: 0,
-				strength: 0.4 + dragEnergy * 0.3
-			});
-			if (clickRipples.length > 8) clickRipples.shift();
-		}
-	}
-	const dotEl = document.getElementById("dot");
-	dotEl.style.left = e.clientX + "px";
-	dotEl.style.top = e.clientY + "px";
-});
+
 document.addEventListener(
 	"touchstart",
 	(e) => {
@@ -416,36 +253,7 @@ document.addEventListener(
 	{ passive: true }
 );
 
-/* lazy smoothing for cursor ring */
-const dotEl = document.getElementById("dot"),
-	ringEl = document.getElementById("ring");
-let csx = 0,
-	csy = 0,
-	crx = 0,
-	cry = 0;
-document.addEventListener("mousemove", (e) => {
-	csx = e.clientX;
-	csy = e.clientY;
-});
-(function ac() {
-	crx += (csx - crx) * 0.11;
-	cry += (csy - cry) * 0.11;
-	rmx += (mx - rmx) * 0.04;
-	rmy += (my - rmy) * 0.04;
-	// decay
-	clickImpulse *= 0.94;
-	dragEnergy *= 0.97;
-	// age ripples
-	for (let i = clickRipples.length - 1; i >= 0; i--) {
-		clickRipples[i].t += 0.016;
-		if (clickRipples[i].t > 2.5) clickRipples.splice(i, 1);
-	}
-	mvx *= 0.88;
-	mvy *= 0.88;
-	ringEl.style.left = crx + "px";
-	ringEl.style.top = cry + "px";
-	requestAnimationFrame(ac);
-})();
+
 
 /* ═══ RIPPLES ══ */
 function spawnRipple(x, y) {
