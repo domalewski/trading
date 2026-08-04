@@ -1,5 +1,5 @@
-const T = {
-	breathe: {
+const themes = {
+	ember: {
 		bg: "#0e0904",
 		accent: [232, 96, 38],
 		accentHex: "#e86026",
@@ -29,7 +29,7 @@ const T = {
 		thumbBg: "rgba(232,96,38,.45)",
 		flashCol: "rgba(232,96,38,.07)"
 	},
-	meditate: {
+	ocean: {
 		bg: "#060510",
 		accent: [148, 105, 255],
 		accentHex: "#9469ff",
@@ -58,7 +58,7 @@ const T = {
 		thumbBg: "rgba(148,105,255,.45)",
 		flashCol: "rgba(148,105,255,.06)"
 	},
-	anxiety: {
+	forest: {
 		bg: "#020904",
 		accent: [60, 185, 98],
 		accentHex: "#3cb962",
@@ -88,7 +88,7 @@ const T = {
 		thumbBg: "rgba(60,185,98,.45)",
 		flashCol: "rgba(60,185,98,.05)"
 	},
-	nature: {
+	violet: {
 		bg: "#030d0e",
 		accent: [105, 195, 215],
 		accentHex: "#69c3d7",
