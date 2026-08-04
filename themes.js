@@ -1,4 +1,4 @@
-const themes = {
+export const presets = {
 	ember: {
 		bg: "#0e0904",
 		accent: [232, 96, 38],
